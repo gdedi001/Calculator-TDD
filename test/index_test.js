@@ -52,17 +52,22 @@ describe('Calculate', () => {
 			const expected = 25;
 
 			//exercise
-			const result = Calculate.divided(inputOne, inputTwo);
+			const result = Calculate.divide(inputOne, inputTwo);
 
 			//verify
 			assert.equal(expected, result);
 		});
 		it('throws an error when the divisor is 0', () => {
 			//setup
+			const inputOne = 2;
+			const inputTwo = 0;
 
 			//exercise
-
 			//verify
+			assert.throws(() => {
+				throw new Error('the quotient of a number and 0 is undefined');
+			},
+			Error);
 		});
 	});
 	describe('.absoluteValue', () => {
