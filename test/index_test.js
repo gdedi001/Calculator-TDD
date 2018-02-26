@@ -83,6 +83,35 @@ describe('Calculate', () => {
 			assert.equal(expected, result);
 		});
 	});
+	describe('.factorial', () => {
+		it('5! is equal to 120', () => {
+	      //setup
+	      const input = 5;
+	      const expectedResult = 120;
+	      //exercise
+	      const result = Calculate.factorial(input);
+	      //verify
+	      assert.equal(result, expectedResult);
+    	});
+	    it('3! is equal to 6', () => {
+	      //setup
+	      const input = 3;
+	      const expectedResult = 6;
+	      //exercise
+	      const result = Calculate.factorial(3);
+	      //verify
+	      assert.equal(result, expectedResult);
+	    });
+	    it('returns 1 when you pass in 0.', () => {
+	      //setup
+	      const input = 0;
+	      const expectedResult = 1;
+	      //exercise
+	      const result = Calculate.factorial(input);
+	      //verify
+	      assert.equal(result, expectedResult);
+	    });
+  	});
 });
 
 

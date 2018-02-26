@@ -25,6 +25,19 @@ const Calculate = {
   	} else {
       return Math.abs(input);
   	}
+  },
+  
+  factorial(input) {
+    //edge case
+    if (input === 0) {
+      return 1;
+    }
+    
+    let val = 1;
+    for (let i = input; i > 0; i--) {
+      val *= i;
+    }
+    return val;
   }
 }
 
