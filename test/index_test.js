@@ -112,6 +112,15 @@ describe('Calculate', () => {
 	      assert.equal(result, expectedResult);
 	    });
   	});
+  	describe('.exponential', () => {
+  		it('returns the result of a base raised to a power', () => {
+  			//setup
+
+  			//exercise
+
+  			//verify
+  		});
+  	});
 });
 
 
