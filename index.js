@@ -38,6 +38,25 @@ const Calculate = {
       val *= i;
     }
     return val;
+  },
+
+  exponential(base, pow) {
+    return Math.pow(base, pow);
+  },
+
+  max(arr) {
+    //edge case
+    if (arr.length === 0) {
+      throw new Error("Error: empty array");
+    }
+
+    let max = 0;
+    arr.forEach((num) => {
+      if (num > max) {
+        max = num;
+      }
+    });
+    return max;
   }
 }
 

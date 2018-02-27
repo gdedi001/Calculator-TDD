@@ -115,6 +115,38 @@ describe('Calculate', () => {
   	describe('.exponential', () => {
   		it('returns the result of a base raised to a power', () => {
   			//setup
+  			const base = 3;
+  			const pow = 2;
+  			const expected = 9;
+  			//exercise
+  			const result = Calculate.exponential(3, 2);
+  			//verify
+  			assert.equal(result, expected);
+  		});
+  		it('returns 1 when the exponent is 0', () => {
+  			//setup
+  			const base = 5;
+  			const pow = 0;
+  			const expected = 1;
+  			//exercise
+  			const result = Calculate.exponential(5, 0);
+
+  			//verify
+  			assert.equal(result, expected);
+  		});
+  	});
+  	describe('.max', () => {
+  		it('returns the maximum number in an array', () => {
+  			//setup
+  			const input = [1,5,2,3,1];
+  			const expected = 5;
+  			//exercise
+  			const result = Calculate.max(input);
+  			//verify
+  			assert.equal(result, expected);
+  		});
+  		it('throws an Error when the array is empty', () => {
+  			//setup
 
   			//exercise
 
