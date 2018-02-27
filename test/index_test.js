@@ -149,11 +149,32 @@ describe('Calculate', () => {
   			//setup
   			const input = [];
   			//exercise
-
   			//verify
   			assert.throws(() => {
   				Calculate.max(input);
   			});
+  		});
+  	});
+  	describe('.min', () => {
+  		it('returns the minimum number is an array', () => {
+  			//setup
+  			const input = [11,5,2,1,10];
+  			const expected = 1;
+  			//exercise
+  			const result = Calculate.min(input);
+  			//verify
+  			assert.equal(result, expected);
+  		});
+  	});
+  	describe('.average', () => {
+  		it('returns the average value of an array', () => {
+  			//setup
+  			const input = [10, 5, 5, 4];
+  			const expected = 6;
+  			//exercise
+  			const result = Calculate.average(input);
+  			//verify
+  			assert.equal(result, expected);
   		});
   	});
 });

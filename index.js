@@ -57,6 +57,29 @@ const Calculate = {
       }
     });
     return max;
+  },
+
+  min(arr) {
+    //edge case
+    if (arr.length === 0) {
+      throw new Error("Error: empty array");
+    }
+
+    let min = Infinity;
+    arr.forEach((num) => {
+      if (num < min) {
+        min = num;
+      }
+    });
+    return min;
+  },
+
+  average(arr) {
+    const length = arr.length;
+    const sum = arr.reduce((total, num) => {
+        return total + num;
+    });
+    return sum / length;
   }
 }
 
