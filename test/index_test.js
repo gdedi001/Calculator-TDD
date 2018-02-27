@@ -147,10 +147,13 @@ describe('Calculate', () => {
   		});
   		it('throws an Error when the array is empty', () => {
   			//setup
-
+  			const input = [];
   			//exercise
 
   			//verify
+  			assert.throws(() => {
+  				Calculate.max(input);
+  			});
   		});
   	});
 });
